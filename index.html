@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            header {
+                background-color: skyblue;
+                padding: 10px;
+                border: 1px solid black;
+            }
+            .content {
+                display: flex;
+                margin: 50px;;
+                border: 1px solid black;
+                gap: 20px;
+            }
+            .actions {
+                flex: 1 0;
+            }
+            .interactions {
+                flex: 2 0;
+            }
+        </style>
+        <title>Strike: Player Two</title>
+    </head>
+    <body>
+      <header>Strike: Player Two</header>
+      <div class="content">
+        <div class="actions">
+            <button id="1">Punch</button>
+            <button id="2">Kick</button>
+            <button id="3">Bomb</button>
+            <button id="4">Bow</button>
+            <button id="5">Sword</button>
+            <button id="6">Punch</button>
+            <button id="7">Punch</button>
+            <button id="8">Punch</button>
+            <button id="9">Punch</button>
+            <button id="10">Punch</button>
+        </div>
+        <div class="interactions" id="info">
+            Sword:
+        </div>
+      </div>
+      <script>
+        document.getElementById("1").addEventListener("click", function() {
+            document.getElementById("info").innerHTML = `
+                Sword
+            `
+        })
+    </script>
+    </body>
+</html>
+ 
