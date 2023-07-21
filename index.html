@@ -2,6 +2,9 @@
 <html>
     <head>
         <style>
+            * {
+                font-family: 'Arial', sans-serif;
+            }
             header {
                 background-color: skyblue;
                 padding: 10px;
@@ -9,15 +12,27 @@
             }
             .content {
                 display: flex;
-                margin: 50px;;
+                margin: 10px;;
                 border: 1px solid black;
                 gap: 20px;
             }
-            .actions {
+            #actions {
                 flex: 1 0;
+                font-size: 12pt;
             }
             .interactions {
                 flex: 2 0;
+            }
+            #actions span {
+                display: block;
+                border: 1px solid black;
+                margin: 3px;
+                background-color: darkblue;
+                cursor: pointer;
+            }
+            #actions span.selected {
+                background-color: skyblue;
+                cursor: text;
             }
         </style>
         <title>Strike: Player Two</title>
@@ -25,28 +40,48 @@
     <body>
       <header>Strike: Player Two</header>
       <div class="content">
-        <div class="actions">
-            <button id="1">Punch</button>
-            <button id="2">Kick</button>
-            <button id="3">Bomb</button>
-            <button id="4">Bow</button>
-            <button id="5">Sword</button>
-            <button id="6">Lava Balloon</button>
-            <button id="7">Lightning</button>
-            <button id="8">Deflect</button>
-            <button id="9">Dance</button>
-            <button id="10">Wipeout</button>
+        <div id="actions">
+            <span id="1">Punch</span>
+            <span id="2">Kick</span>
+            <span id="3">Bomb</span>
+            <span id="4">Bow</span>
+            <span id="5">Sword</span>
+            <span id="6">Lava Balloon</span>
+            <span id="7">Lightning</span>
+            <span id="8">Deflect</span>
+            <span id="9">Dance</span>
+            <span id="10">Wipeout</span>
         </div>
         <div class="interactions" id="info">
-            Sword:
+            Sword
         </div>
       </div>
       <script>
         document.getElementById("1").addEventListener("click", function() {
             document.getElementById("info").innerHTML = `
-                Sword
+                Sword:
             `
         })
+
+        document.getElementById("2").addEventListener("click", function() {
+            document.getElementById("info").innerHTML = `
+                SWords:
+            `
+        })
+        console.log(document.getElementById("actions"))
+        
+        let actionsChildren = document.getElementById("actions").children
+        for (let i = 0; i < actionsChildren.length; i++) {
+            let action = actionsChildren[i]
+            action.addEventListener("click", () => {
+                for (let j = 0; j < actionsChildren.length; j++) {
+                    let action2 = actionsChildren[j]
+                    action2.classList.remove("selected");
+                }
+                action.classList.add("selected");
+            })
+        } 
+
     </script>
     </body>
 </html>
