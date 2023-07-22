@@ -29,6 +29,14 @@
                 border: 1px solid black;
                 margin: 3px;
                 background-color: darkblue;
+                cursor: text;
+            }
+            #results span {
+                color: black;
+                display: block;
+                border: 1px solid white;
+                margin: 3px;
+                background-color: white;
                 cursor: pointer;
             }
             #actions span.selected {
@@ -45,8 +53,8 @@
             <span id="1">Punch</span>
             <span id="2">Kick</span>
             <span id="3">Bomb</span>
-            <span id="4">Bow</span>
-            <span id="5">Sword</span>
+            <span id="4">Sword</span>
+            <span id="5">Bow</span>
             <span id="6">Lava Balloon</span>
             <span id="7">Lightning</span>
             <span id="8">Deflect</span>
@@ -54,21 +62,210 @@
             <span id="10">Wipeout</span>
         </div>
         <div class="interactions" id="info">
-            Sword
+            Click on a move to begin!
         </div>
       </div>
       <script>
         document.getElementById("1").addEventListener("click", function() {
-            document.getElementById("info").innerHTML = `
-                Sword:
+            document.getElementById("info").innerHTML = 
+                `
+                <div class="list">
+                    <div id="results">
+                        <span> Punch 😐 </span>
+                        <span> Kick ❤️‍🩹 </span>
+                        <span> Bomb ⭐ </span>
+                        <span> Sword 😐 </span>
+                        <span> Bow ❌ </span>
+                        <span> Lava Balloon ❤️‍🩹 </span>
+                        <span> Lightning ❌ </span>
+                        <span> Deflect 😐 </span>
+                        <span> Dance ❤️‍🩹 </span>
+                        <span> Wipeout ❤️‍🩹 </span>
+                    </div>
+                </div>
             `
         })
 
         document.getElementById("2").addEventListener("click", function() {
-            document.getElementById("info").innerHTML = `
-                SWords:
+            document.getElementById("info").innerHTML = 
+                `
+                <div class="list">
+                    <div id="results">
+                        <span> Punch 👍 </span>
+                        <span> Kick 😐 </span>
+                        <span> Bomb 💎 </span>
+                        <span> Sword 👍 </span>
+                        <span> Bow ❌ </span>
+                        <span> Lava Balloon (P2)❌ </span>
+                        <span> Lightning ❌ </span>
+                        <span> Deflect 😐 </span>
+                        <span> Dance ❤️‍🩹 </span>
+                        <span> Wipeout ❤️‍🩹 </span>
+                    </div>
+                </div>
             `
         })
+
+        document.getElementById("3").addEventListener("click", function() {
+            document.getElementById("info").innerHTML = 
+                `
+                <div class="list">
+                    <div id="results">
+                        <span> Punch ❌❌ </span>
+                        <span> Kick ❌❌❌ </span>
+                        <span> Bomb 😐 </span>
+                        <span> Sword ⭐ </span>
+                        <span> Bow ⭐ </span>
+                        <span> Lava Balloon 😐 </span>
+                        <span> Lightning ⭐ </span>
+                        <span> Deflect ❌❌ </span>
+                        <span> Dance ⭐ </span>
+                        <span> Wipeout ❤️‍🩹 </span>
+                    </div>
+                </div>
+            `
+        })
+
+        document.getElementById("4").addEventListener("click", function() {
+            document.getElementById("info").innerHTML = 
+                `
+                <div class="list">
+                    <div id="results">
+                        <span> Punch ⭐ </span>
+                        <span> Kick ❤️‍🩹 </span>
+                        <span> Bomb ❌ </span>
+                        <span> Sword 😐 </span>
+                        <span> Bow ⭐ </span>
+                        <span> Lava Balloon ⭐ </span>
+                        <span> Lightning ❌ </span>
+                        <span> Deflect ⭐ </span>
+                        <span> Dance ❤️‍🩹 </span>
+                        <span> Wipeout ❤️‍🩹 </span>
+                    </div>
+                </div>
+            `
+        })
+
+        document.getElementById("5").addEventListener("click", function() {
+            document.getElementById("info").innerHTML = 
+                `
+                <div class="list">
+                    <div id="results">
+                        <span> Punch 😐 </span>
+                        <span> Kick ⭐ </span>
+                        <span> Bomb ❌ </span>
+                        <span> Sword ❌ </span>
+                        <span> Bow 😐 </span>
+                        <span> Lava Balloon ⭐ </span>
+                        <span> Lightning (P1)👍 </span>
+                        <span> Deflect ⭐ </span>
+                        <span> Dance ❤️‍🩹 </span>
+                        <span> Wipeout ❤️‍🩹 </span>
+                    </div>
+                </div>
+            `
+        })
+
+        document.getElementById("6").addEventListener("click", function() {
+            document.getElementById("info").innerHTML = 
+                `
+                <div class="list">
+                    <div id="results">
+                        <span> Punch 👍 </span>
+                        <span> Kick (P1)⭐ </span>
+                        <span> Bomb 😐 </span>
+                        <span> Sword ❌ </span>
+                        <span> Bow ❌ </span>
+                        <span> Lava Balloon 😐 </span>
+                        <span> Lightning ⭐ </span>
+                        <span> Deflect ❌ </span>
+                        <span> Dance ⭐ </span>
+                        <span> Wipeout ⭐ </span>
+                    </div>
+                </div>
+            `
+        })
+
+        document.getElementById("7").addEventListener("click", function() {
+            document.getElementById("info").innerHTML = 
+                `
+                <div class="list">
+                    <div id="results">
+                        <span> Punch ⭐ </span>
+                        <span> Kick ⭐ </span>
+                        <span> Bomb ❌ </span>
+                        <span> Sword ⭐ </span>
+                        <span> Bow (P1)👍 </span>
+                        <span> Lava Balloon ❌ </span>
+                        <span> Lightning 😐 </span>
+                        <span> Deflect ⭐ </span>
+                        <span> Dance ⭐ </span>
+                        <span> Wipeout ⭐ </span>
+                    </div>
+                </div>
+            `
+        })
+
+        document.getElementById("8").addEventListener("click", function() {
+            document.getElementById("info").innerHTML = 
+                `
+                <div class="list">
+                    <div id="results">
+                        <span> Punch 😐 </span>
+                        <span> Kick 😐 </span>
+                        <span> Bomb ⭐ </span>
+                        <span> Sword ❌ </span>
+                        <span> Bow ❌ </span>
+                        <span> Lava Balloon ⭐ </span>
+                        <span> Lightning ❌ </span>
+                        <span> Deflect 😐 </span>
+                        <span> Dance 😐 </span>
+                        <span> Wipeout (P1)👍 </span>
+                    </div>
+                </div>
+            `
+        })
+
+        document.getElementById("9").addEventListener("click", function() {
+            document.getElementById("info").innerHTML = 
+                `
+                <div class="list">
+                    <div id="results">
+                        <span> Punch 👍 </span>
+                        <span> Kick 👍 </span>
+                        <span> Bomb ❌ </span>
+                        <span> Sword 👍 </span>
+                        <span> Bow 👍 </span>
+                        <span> Lava Balloon ❌ </span>
+                        <span> Lightning ❌ </span>
+                        <span> Deflect 😐 </span>
+                        <span> Dance 😐 </span>
+                        <span> Wipeout ❤️‍🩹 </span>
+                    </div>
+                </div>
+            `
+        })
+
+        document.getElementById("10").addEventListener("click", function() {
+            document.getElementById("info").innerHTML = 
+                `
+                <div class="list">
+                    <div id="results">
+                        <span> Punch 👍 </span>
+                        <span> Kick 👍 </span>
+                        <span> Bomb 👍 </span>
+                        <span> Sword 👍 </span>
+                        <span> Bow 👍 </span>
+                        <span> Lava Balloon ❌ </span>
+                        <span> Lightning ❌ </span>
+                        <span> Deflect (P1)👍 </span>
+                        <span> Dance 👍 </span>
+                        <span> Wipeout (P1)👍 </span>
+                    </div>
+                </div>
+            `
+        })
+
         console.log(document.getElementById("actions"))
         
         let actionsChildren = document.getElementById("actions").children
