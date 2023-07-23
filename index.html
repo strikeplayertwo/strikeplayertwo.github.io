@@ -4,6 +4,7 @@
         <style>
             * {
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                max-width: 1000px
             }
             header {
                 background-color: skyblue;
@@ -21,19 +22,19 @@
                 font-size: 12pt;
             }
             .interactions {
-                flex: 2 0;
+                flex: 1 0;
             }
             .dmgdlt {
-                flex: 3 0;
+                flex: 1 0;
             }
             .dmgtkn {
-                flex: 4 0;
+                flex: 1 0;
             }
             #actions span {
                 color: white;
                 display: block;
-                border: 1px solid black;
-                margin: 3px;
+                border: 2px solid black;
+                margin: 1px;
                 background-color: darkblue;
                 cursor: text;
             }
@@ -60,14 +61,6 @@
                 margin: 2px;
                 background-color: rgb(255, 47, 47);
                 cursor: text; 
-            }
-            #testing span {
-                color: black;
-                display: block;
-                border: 1px solid white;
-                margin: 3px;
-                background-color: white;
-                cursor: pointer;
             }
             #actions span.selected {
                 background-color: skyblue;
