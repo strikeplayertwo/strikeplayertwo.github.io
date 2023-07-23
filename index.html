@@ -17,11 +17,17 @@
                 gap: 20px;
             }
             #actions {
-                flex: 1 0;
+                flex: 2 0;
                 font-size: 12pt;
             }
             .interactions {
                 flex: 2 0;
+            }
+            .dmgdlt {
+                flex: 3 0;
+            }
+            .dmgtkn {
+                flex: 4 0;
             }
             #actions span {
                 color: white;
@@ -32,6 +38,30 @@
                 cursor: text;
             }
             #results span {
+                color: black;
+                display: block;
+                border: 1px solid white;
+                margin: 3px;
+                background-color: white;
+                cursor: text;
+            }
+            #delt span {
+                color: black;
+                display: block;
+                border: 3px solid greenyellow;
+                margin: 2px;
+                background-color: greenyellow;
+                cursor: text;
+            }
+            #tken span {
+                color: black;
+                display: block;
+                border: 3px solid rgb(255, 47, 47);
+                margin: 2px;
+                background-color: rgb(255, 47, 47);
+                cursor: text; 
+            }
+            #testing span {
                 color: black;
                 display: block;
                 border: 1px solid white;
@@ -50,19 +80,23 @@
       <header>Strike: Player Two</header>
       <div class="content">
         <div id="actions">
-            <span id="1">Punch</span>
-            <span id="2">Kick</span>
-            <span id="3">Bomb</span>
-            <span id="4">Sword</span>
-            <span id="5">Bow</span>
-            <span id="6">Lava Balloon</span>
-            <span id="7">Lightning</span>
-            <span id="8">Deflect</span>
-            <span id="9">Dance</span>
-            <span id="10">Wipeout</span>
+            <span id="1">Punch⚔️👊</span>
+            <span id="2">Kick⛏️👊</span>
+            <span id="3">Bomb⚔️🏹</span>
+            <span id="4">Sword⚔️👊</span>
+            <span id="5">Bow⚔️🏹</span>
+            <span id="6">Lava Balloon⚔️🏹</span>
+            <span id="7">Lightning⛏️⚡</span>
+            <span id="8">Deflect🛡️⚡</span>
+            <span id="9">Dance⛏️⚡</span>
+            <span id="10">Wipeout⛏️👊</span>
         </div>
         <div class="interactions" id="info">
             Click on a move to begin!
+        </div>
+        <div class="dmgdlt" id="dlt">
+        </div>
+        <div class="dmgtkn" id="tkn">
         </div>
       </div>
       <script>
@@ -81,6 +115,40 @@
                         <span> Deflect 😐 </span>
                         <span> Dance ❤️‍🩹 </span>
                         <span> Wipeout ❤️‍🩹 </span>
+                    </div>
+                </div>
+            `
+            document.getElementById("dlt").innerHTML = 
+                `
+                <div class="dealt">
+                    <div id="delt">
+                        <span> 20-23‍  </span>
+                        <span> ‍  </span>
+                        <span> 50-66‍  </span>
+                        <span> 20-23(50%)‍  </span>
+                        <span> 20-23‍  </span>
+                        <span> 40-46(20%)‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                    </div>
+                </div>
+            `
+            document.getElementById("tkn").innerHTML = 
+                `
+                <div class="taken">
+                    <div id="tken">
+                        <span> ‍20-23 </span>
+                        <span> ‍12-14 </span>
+                        <span> ‍  </span>
+                        <span> ‍30-44 </span>
+                        <span> ‍25-27(50%) </span>
+                        <span> ‍35-57 </span>
+                        <span> ‍26-28(80%) </span>
+                        <span> ‍  </span>
+                        <span> ‍9-11 </span>
+                        <span> ‍4-6 </span>
                     </div>
                 </div>
             `
@@ -104,6 +172,40 @@
                     </div>
                 </div>
             `
+            document.getElementById("dlt").innerHTML = 
+                `
+                <div class="dealt">
+                    <div id="delt">
+                        <span> 12-14 </span>
+                        <span> 12-14 </span>
+                        <span> 80-95 </span>
+                        <span> 12-14 </span>
+                        <span> ‍  </span>
+                        <span> (P1)35-57 </span>
+                        <span> 24-28(20%) </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                    </div>
+                </div>
+            `
+            document.getElementById("tkn").innerHTML = 
+                `
+                <div class="taken">
+                    <div id="tken">
+                        <span> ‍  </span>
+                        <span> ‍12-14  </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍25-27  </span>
+                        <span> ‍(P2)35-57  </span>
+                        <span> ‍26-28(80%)  </span>
+                        <span> ‍  </span>
+                        <span> ‍9-11  </span>
+                        <span> ‍4-6  </span>
+                    </div>
+                </div>
+            `
         })
 
         document.getElementById("3").addEventListener("click", function() {
@@ -121,6 +223,40 @@
                         <span> Deflect ❌❌ </span>
                         <span> Dance ⭐ </span>
                         <span> Wipeout ❤️‍🩹 </span>
+                    </div>
+                </div>
+            `
+            document.getElementById("dlt").innerHTML = 
+                `
+                <div class="dealt">
+                    <div id="delt">
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> 40-54 </span>
+                        <span> 40-54 </span>
+                        <span> 40-54 </span>
+                        <span> 40-54 </span>
+                        <span> 40-54 </span>
+                        <span> ‍  </span>
+                        <span> 40-54 </span>
+                        <span> ‍  </span>
+                    </div>
+                </div>
+            `
+            document.getElementById("tkn").innerHTML = 
+                `
+                <div class="taken">
+                    <div id="tken">
+                        <span> ‍50-66  </span>
+                        <span> ‍80-95  </span>
+                        <span> ‍40-54  </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍35-57  </span>
+                        <span> ‍26-28(80%)  </span>
+                        <span> ‍54-56  </span>
+                        <span> ‍  </span>
+                        <span> ‍4-6  </span>
                     </div>
                 </div>
             `
@@ -144,6 +280,40 @@
                     </div>
                 </div>
             `
+            document.getElementById("dlt").innerHTML = 
+                `
+                <div class="dealt">
+                    <div id="delt">
+                        <span> 30-44 </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> 30-44 </span>
+                        <span> 30-44 </span>
+                        <span> 30-44(20%) </span>
+                        <span> 18-22 </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                    </div>
+                </div>
+            `
+            document.getElementById("tkn").innerHTML = 
+                `
+                <div class="taken">
+                    <div id="tken">
+                        <span> ‍  </span>
+                        <span> ‍12-14  </span>
+                        <span> ‍40-54  </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍26-28(80%)  </span>
+                        <span> ‍  </span>
+                        <span> ‍9-11  </span>
+                        <span> ‍4-6  </span>
+                    </div>
+                </div>
+            `
         })
 
         document.getElementById("5").addEventListener("click", function() {
@@ -161,6 +331,40 @@
                         <span> Deflect ⭐ </span>
                         <span> Dance ❤️‍🩹 </span>
                         <span> Wipeout ❤️‍🩹 </span>
+                    </div>
+                </div>
+            `
+            document.getElementById("dlt").innerHTML = 
+                `
+                <div class="dealt">
+                    <div id="delt">
+                        <span> 25-27(50%) </span>
+                        <span> 25-27 </span>
+                        <span> ‍  </span>
+                        <span> ‍ </span>
+                        <span> 25-27 </span>
+                        <span> 35-57 </span>
+                        <span> (P1)25-27 </span>
+                        <span> 25-57 </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                    </div>
+                </div>
+            `
+            document.getElementById("tkn").innerHTML = 
+                `
+                <div class="taken">
+                    <div id="tken">
+                        <span> ‍20-23(50%)  </span>
+                        <span> ‍  </span>
+                        <span> ‍40-54  </span>
+                        <span> ‍30-44  </span>
+                        <span> ‍25-27  </span>
+                        <span> ‍  </span>
+                        <span> ‍26-28(80%)  </span>
+                        <span> ‍  </span>
+                        <span> ‍9-11  </span>
+                        <span> ‍4-6  </span>
                     </div>
                 </div>
             `
@@ -184,6 +388,40 @@
                     </div>
                 </div>
             `
+            document.getElementById("dlt").innerHTML = 
+                `
+                <div class="dealt">
+                    <div id="delt">
+                        <span> 35-57 </span>
+                        <span> (P1)35-57 </span>
+                        <span> 35-57 </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> 35-57 </span>
+                        <span> 35-57 </span>
+                        <span> ‍  </span>
+                        <span> 25-32 </span>
+                        <span> 35-57 </span>
+                    </div>
+                </div>
+            `
+            document.getElementById("tkn").innerHTML = 
+                `
+                <div class="taken">
+                    <div id="tken">
+                        <span> ‍20-23  </span>
+                        <span> ‍(P2)35-57  </span>
+                        <span> ‍40-54  </span>
+                        <span> ‍30-44  </span>
+                        <span> ‍35-57  </span>
+                        <span> ‍35-57  </span>
+                        <span> ‍26-28(80%)  </span>
+                        <span> ‍35-57  </span>
+                        <span> ‍  </span>
+                        <span> ‍4-6  </span>
+                    </div>
+                </div>
+            `
         })
 
         document.getElementById("7").addEventListener("click", function() {
@@ -201,6 +439,40 @@
                         <span> Deflect ⭐ </span>
                         <span> Dance ⭐ </span>
                         <span> Wipeout ⭐ </span>
+                    </div>
+                </div>
+            `
+            document.getElementById("dlt").innerHTML = 
+                `
+                <div class="dealt">
+                    <div id="delt">
+                        <span> 26-28(80%) </span>
+                        <span> 26-28(80%) </span>
+                        <span> 26-28(80%) </span>
+                        <span> 26-28(80%) </span>
+                        <span> 26-28(80%) </span>
+                        <span> 26-28(80%) </span>
+                        <span> 26-28(80%) </span>
+                        <span> 26-28(80%) </span>
+                        <span> 26-28(80%) </span>
+                        <span> 26-28(80%) </span>
+                    </div>
+                </div>
+            `
+            document.getElementById("tkn").innerHTML = 
+                `
+                <div class="taken">
+                    <div id="tken">
+                        <span> ‍40-46(20%)  </span>
+                        <span> ‍24-28(20%)  </span>
+                        <span> ‍40-54  </span>
+                        <span> ‍30-44(20%)  </span>
+                        <span> ‍(P2)25-27  </span>
+                        <span> ‍35-57  </span>
+                        <span> ‍26-28(80%)  </span>
+                        <span> ‍  </span>
+                        <span> ‍9-11(20%)  </span>
+                        <span> ‍4-6(20%)  </span>
                     </div>
                 </div>
             `
@@ -224,6 +496,40 @@
                     </div>
                 </div>
             `
+            document.getElementById("dlt").innerHTML = 
+                `
+                <div class="dealt">
+                    <div id="delt">
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> 54-56 </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> 35-57 </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍ -18--20 </span>
+                        <span> (P1)4-6 </span>
+                    </div>
+                </div>
+            `
+            document.getElementById("tkn").innerHTML = 
+                `
+                <div class="taken">
+                    <div id="tken">
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍18-22  </span>
+                        <span> ‍25-27  </span>
+                        <span> ‍  </span>
+                        <span> ‍26-28(80%)  </span>
+                        <span> ‍  </span>
+                        <span> ‍-18--20  </span>
+                        <span> ‍(P2)4-6  </span>
+                    </div>
+                </div>
+            `
         })
 
         document.getElementById("9").addEventListener("click", function() {
@@ -244,6 +550,40 @@
                     </div>
                 </div>
             `
+            document.getElementById("dlt").innerHTML = 
+                `
+                <div class="dealt">
+                    <div id="delt">
+                        <span> 9-11 </span>
+                        <span> 9-11 </span>
+                        <span> ‍  </span>
+                        <span> 9-11 </span>
+                        <span> 9-11 </span>
+                        <span> ‍  </span>
+                        <span> 9-11(20%) </span>
+                        <span> -18--20 </span>
+                        <span> -18--20 </span>
+                        <span> ‍  </span>
+                    </div>
+                </div>
+            `
+            document.getElementById("tkn").innerHTML = 
+                `
+                <div class="taken">
+                    <div id="tken">
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍40-54  </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍25-32  </span>
+                        <span> ‍26-28(80%)  </span>
+                        <span> ‍-18--20  </span>
+                        <span> ‍-18--20  </span>
+                        <span> ‍4-6  </span>
+                    </div>
+                </div>
+            `
         })
 
         document.getElementById("10").addEventListener("click", function() {
@@ -261,6 +601,40 @@
                         <span> Deflect (P1)👍 </span>
                         <span> Dance 👍 </span>
                         <span> Wipeout (P1)👍 </span>
+                    </div>
+                </div>
+            `
+            document.getElementById("dlt").innerHTML = 
+                `
+                <div class="dealt">
+                    <div id="delt">
+                        <span> 4-6 </span>
+                        <span> 4-6 </span>
+                        <span> 4-6 </span>
+                        <span> 4-6 </span>
+                        <span> 4-6 </span>
+                        <span> 4-6 </span>
+                        <span> 4-6(20%) </span>
+                        <span> (P1)4-6 </span>
+                        <span> 4-6 </span>
+                        <span> (P1)4-6 </span>
+                    </div>
+                </div>
+            `
+            document.getElementById("tkn").innerHTML = 
+                `
+                <div class="taken">
+                    <div id="tken">
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍  </span>
+                        <span> ‍35-57  </span>
+                        <span> ‍26-28(80%)  </span>
+                        <span> ‍(P2)4-6  </span>
+                        <span> ‍  </span>
+                        <span> ‍(P2)4-6  </span>
                     </div>
                 </div>
             `
