@@ -54,6 +54,14 @@
                 background-color: greenyellow;
                 cursor: text;
             }
+            #id span {
+                color: white;
+                display: block;
+                border: 3px solid darkblue;
+                margin: 2px;
+                background-color: darkblue;
+                cursor: text;
+            }
             #tken span {
                 color: black;
                 display: block;
@@ -98,7 +106,13 @@
       <script>
         document.getElementById("1").addEventListener("mouseover", function() {
             document.getElementById("move").innerHTML = 
-            `hi`
+            `
+            <div class="class">
+                <div id="id">
+                    <span> Punch(ATK⚔️, MEL👊): Basic melee attack. Does 1.5x damage on <b>Streak🔥</b>, 2x damage on <b>DoubleStreak🔥🔥</b>, and 3x damage on <b>TripleStreak🔥🔥🔥</b>. </span>
+                </div>
+            </div>
+            `
         })
         document.getElementById("1").addEventListener("mouseout", function() {
             document.getElementById("move").innerHTML = 
