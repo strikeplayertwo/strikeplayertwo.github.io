@@ -87,12 +87,23 @@
         <div class="interactions" id="info">
             Click on a move to begin!
         </div>
+        <div class="moveinfo" id="move">
+
+        </div>
         <div class="dmgdlt" id="dlt">
         </div>
         <div class="dmgtkn" id="tkn">
         </div>
       </div>
       <script>
+        document.getElementById("1").addEventListener("mouseover", function() {
+            document.getElementById("move").innerHTML = 
+            `hi`
+        })
+        document.getElementById("1").addEventListener("mouseout", function() {
+            document.getElementById("move").innerHTML = 
+            ``
+        })
         document.getElementById("1").addEventListener("click", function() {
             document.getElementById("info").innerHTML = 
                 `
@@ -144,6 +155,7 @@
                         <span> ‍4-6 </span>
                     </div>
                 </div>
+
             `
         })
 
