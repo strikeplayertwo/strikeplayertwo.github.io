@@ -146,8 +146,11 @@
       </div>
       <script>
         let variable = 1;
+        console.log("6")
         document.getElementById("yerr").addEventListener("click", function() {
+            console.log("1");
             if (variable == 1) {
+                console.log("2");
                 document.getElementById("info2button").innerHTML =
             `
             <div class="imtired">
@@ -157,7 +160,9 @@
             </div>
             `
             variable = 2;
+            console.log("3");
             } else {
+                console.log("4");
                 document.getElementById("info2button").innerHTML =
             `
             <div class="imtired">
@@ -167,6 +172,7 @@
             </div>
             `
             variable = 1;
+            console.log("5");
             }
 
         })
