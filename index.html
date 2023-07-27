@@ -160,23 +160,26 @@
       </div>
       <script>
         let variable = 1;
-        console.log("6")
+        document.getElementById("yerr").innerHTML =`
+            <div class="imtired">
+                <div id="sleepy">
+                    <span> Info: (Click to Collapse)<br> Star⭐ = Great interaction (user deals a lot of damage) <br> Thumbsup👍 = Good interaction (user deals a small amount of damage) <br> Neutral😐 = Neutral interaction (user deals and takes similar amounts of damage) </span>
+                </div> 
+            </div>   
+        `
         document.getElementById("yerr").addEventListener("click", function() {
             console.log("1");
             if (variable == 1) {
-                console.log("2");
                 document.getElementById("yerr").innerHTML =
             `
             <div class="imtired">
                 <div id="sleepy">
-                    <span> Info </span>
+                    <span> Info: </span>
                 </div>
             </div>
             `
             variable = 2;
-            console.log("3");
             } else {
-                console.log("4");
                 document.getElementById("yerr").innerHTML =
             `
             <div class="imtired">
@@ -186,7 +189,6 @@
             </div>   
             `
             variable = 1;
-            console.log("5");
             }
         })
         document.getElementById("1").addEventListener("mouseover", function() {
