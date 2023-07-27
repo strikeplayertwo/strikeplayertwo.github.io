@@ -25,6 +25,24 @@
                 gap: 10px;
                 max-width: 395px
             }
+            .infobutton {
+                display: flex;
+                margin: 10px;;
+                border: 2px solid black;
+                gap: 20px;
+            }
+            #info2button {
+                flex: 0 0;
+                font-size: 12pt;
+            }
+            #info2button span {
+                color: black;
+                display: block;
+                border: 2px solid black;
+                margin: 1px;
+                background-color: gray;
+                cursor: text;
+            }
             #actions {
                 flex: 2 0;
                 font-size: 12pt;
@@ -52,6 +70,14 @@
                 border: 1px solid white;
                 margin: 3px;
                 background-color: white;
+                cursor: text;
+            }
+            #sleepy span {
+                color: black;
+                display: block;
+                border: 2px solid black;
+                margin: 1px;
+                background-color: gray;
                 cursor: text;
             }
             #delt span {
@@ -113,7 +139,22 @@
 
         </div>
       </div>
+      <div class="infobutton">
+        <div id="info2button">
+            <span id="yerr">Info</span>
+        </div>
+      </div>
       <script>
+        document.getElementById("yerr").addEventListener("click", function() {
+            document.getElementById("info3button").innerHTML =
+            `
+            <div class="imtired">
+                <div id="sleepy">
+                    <span> Hi </span>
+                </div>
+            </div>
+            `
+        })
         document.getElementById("1").addEventListener("mouseover", function() {
             document.getElementById("move").innerHTML = 
             `
