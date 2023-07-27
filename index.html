@@ -28,12 +28,14 @@
             .infobutton {
                 display: flex;
                 margin: 10px;;
-                border: 2px solid black;
+                border: 2px solid white;
                 gap: 20px;
+                max-width: 1000px;
             }
             #info2button {
                 flex: 0 0;
                 font-size: 12pt;
+                max-width: 1000px;
             }
             #info2button span {
                 color: black;
@@ -42,6 +44,7 @@
                 margin: 1px;
                 background-color: gray;
                 cursor: text;
+                max-width: 1000px;
             }
             #actions {
                 flex: 2 0;
@@ -75,10 +78,11 @@
             #sleepy span {
                 color: black;
                 display: block;
-                border: 2px solid black;
+                border: 2px solid gray;
                 margin: 1px;
                 background-color: gray;
                 cursor: text;
+                max-width: 1000px
             }
             #delt span {
                 color: black;
@@ -141,7 +145,7 @@
       </div>
       <div class="infobutton">
         <div id="info2button">
-            <span id="yerr">Info</span>
+            <span id="yerr">Info: <br> star</span>
         </div>
       </div>
       <script>
@@ -151,11 +155,11 @@
             console.log("1");
             if (variable == 1) {
                 console.log("2");
-                document.getElementById("info2button").innerHTML =
+                document.getElementById("yerr").innerHTML =
             `
             <div class="imtired">
                 <div id="sleepy">
-                    <span> Hi </span>
+                    <span> Info </span>
                 </div>
             </div>
             `
@@ -163,18 +167,17 @@
             console.log("3");
             } else {
                 console.log("4");
-                document.getElementById("info2button").innerHTML =
+                document.getElementById("yerr").innerHTML =
             `
             <div class="imtired">
                 <div id="sleepy">
-                    <span> Hello </span>
-                </div>
-            </div>
+                    <span> Info: <br> Star⭐ = Great interaction (user deals a lot of damage) <br> Thumbsup👍 = Good interaction (user deals a small amount of damage) <br> Neutral😐 = Neutral interaction (user deals and takes similar amounts of damage) </span>
+                </div> 
+            </div>   
             `
             variable = 1;
             console.log("5");
             }
-
         })
         document.getElementById("1").addEventListener("mouseover", function() {
             document.getElementById("move").innerHTML = 
