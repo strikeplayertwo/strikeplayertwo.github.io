@@ -145,8 +145,10 @@
         </div>
       </div>
       <script>
+        let variable = 1;
         document.getElementById("yerr").addEventListener("click", function() {
-            document.getElementById("info3button").innerHTML =
+            if (variable == 1) {
+                document.getElementById("info2button").innerHTML =
             `
             <div class="imtired">
                 <div id="sleepy">
@@ -154,6 +156,19 @@
                 </div>
             </div>
             `
+            variable = 2;
+            } else {
+                document.getElementById("info2button").innerHTML =
+            `
+            <div class="imtired">
+                <div id="sleepy">
+                    <span> Hello </span>
+                </div>
+            </div>
+            `
+            variable = 1;
+            }
+
         })
         document.getElementById("1").addEventListener("mouseover", function() {
             document.getElementById("move").innerHTML = 
