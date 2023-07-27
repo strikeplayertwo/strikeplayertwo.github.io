@@ -19,8 +19,10 @@
             }
             .classs {
                 display: flex;
-                margin: 10px;;
-                gap: 20px;
+                margin-left: 30px;
+                margin-top: 0px;
+                border: 0px solid white;
+                gap: 10px;
                 max-width: 395px
             }
             #actions {
@@ -180,7 +182,20 @@
 
             `
         })
-
+        document.getElementById("2").addEventListener("mouseover", function() {
+            document.getElementById("move").innerHTML = 
+            `
+            <div class="class">
+                <div id="id">
+                    <span> Kick(CHP⛏️, MEL👊): Mid-range melee attack that <b>stuns</b> enemies when hit. </span>
+                </div>
+            </div>
+            `
+        })
+        document.getElementById("2").addEventListener("mouseout", function() {
+            document.getElementById("move").innerHTML = 
+            ``
+        })
         document.getElementById("2").addEventListener("click", function() {
             document.getElementById("info").innerHTML = 
                 `
@@ -234,7 +249,20 @@
                 </div>
             `
         })
-
+        document.getElementById("3").addEventListener("mouseover", function() {
+            document.getElementById("move").innerHTML = 
+            `
+            <div class="class">
+                <div id="id">
+                    <span> Bomb(ATK⚔️, PRO🏹): Projectile attack that does consistent, high damage but suffers greatly when deflected.</span>
+                </div>
+            </div>
+            `
+        })
+        document.getElementById("3").addEventListener("mouseout", function() {
+            document.getElementById("move").innerHTML = 
+            ``
+        })
         document.getElementById("3").addEventListener("click", function() {
             document.getElementById("info").innerHTML = 
                 `
@@ -288,7 +316,20 @@
                 </div>
             `
         })
-
+        document.getElementById("4").addEventListener("mouseover", function() {
+            document.getElementById("move").innerHTML = 
+            `
+            <div class="class">
+                <div id="id">
+                    <span> Sword(ATK⚔️, MEL👊): Strong short-range melee attack with consistent damage. </span>
+                </div>
+            </div>
+            `
+        })
+        document.getElementById("4").addEventListener("mouseout", function() {
+            document.getElementById("move").innerHTML = 
+            ``
+        })
         document.getElementById("4").addEventListener("click", function() {
             document.getElementById("info").innerHTML = 
                 `
@@ -342,7 +383,20 @@
                 </div>
             `
         })
-
+        document.getElementById("5").addEventListener("mouseover", function() {
+            document.getElementById("move").innerHTML = 
+            `
+            <div class="class">
+                <div id="id">
+                    <span> Bow(ATK⚔️, PRO🏹): Ranged projectile attack. Lands critical hit 🎯(+6 dmg) when user's health is above <b>60</b>❤️ <u>or</u>  <b>Streak🔥</b> is applied, and lands a double critical hit 🎯🎯(+12 dmg) when <b>both</b> conditions are present.</span>
+                </div>
+            </div>
+            `
+        })
+        document.getElementById("5").addEventListener("mouseout", function() {
+            document.getElementById("move").innerHTML = 
+            ``
+        })
         document.getElementById("5").addEventListener("click", function() {
             document.getElementById("info").innerHTML = 
                 `
@@ -396,7 +450,20 @@
                 </div>
             `
         })
-
+        document.getElementById("6").addEventListener("mouseover", function() {
+            document.getElementById("move").innerHTML = 
+            `
+            <div class="class">
+                <div id="id">
+                    <span> Lava Balloon(ATK⚔️, PRO🏹): Projectile attack that counters kick and punch but is countered by bow and sword.</span>
+                </div>
+            </div>
+            `
+        })
+        document.getElementById("6").addEventListener("mouseout", function() {
+            document.getElementById("move").innerHTML = 
+            ``
+        })
         document.getElementById("6").addEventListener("click", function() {
             document.getElementById("info").innerHTML = 
                 `
@@ -450,7 +517,20 @@
                 </div>
             `
         })
-
+        document.getElementById("7").addEventListener("mouseover", function() {
+            document.getElementById("move").innerHTML = 
+            `
+            <div class="class">
+                <div id="id">
+                    <span> Lightning(CHP⛏️, SPL⚡): Spell that has an <b>80</b>% chance of hitting on every use and <b>stuns</b> enemies on hit.</span>
+                </div>
+            </div>
+            `
+        })
+        document.getElementById("7").addEventListener("mouseout", function() {
+            document.getElementById("move").innerHTML = 
+            ``
+        })
         document.getElementById("7").addEventListener("click", function() {
             document.getElementById("info").innerHTML = 
                 `
@@ -504,7 +584,20 @@
                 </div>
             `
         })
-
+        document.getElementById("8").addEventListener("mouseover", function() {
+            document.getElementById("move").innerHTML = 
+            `
+            <div class="class">
+                <div id="id">
+                    <span> Deflect(DEF🛡️, MEL👊): Defensive move that counters most projectiles. </span>
+                </div>
+            </div>
+            `
+        })
+        document.getElementById("8").addEventListener("mouseout", function() {
+            document.getElementById("move").innerHTML = 
+            ``
+        })
         document.getElementById("8").addEventListener("click", function() {
             document.getElementById("info").innerHTML = 
                 `
@@ -558,7 +651,20 @@
                 </div>
             `
         })
-
+        document.getElementById("9").addEventListener("mouseover", function() {
+            document.getElementById("move").innerHTML = 
+            `
+            <div class="class">
+                <div id="id">
+                    <span> Dance(CHP⛏️, SPL⚡): Chip damage card that does <b>10</b> damage on hit.</span>
+                </div>
+            </div>
+            `
+        })
+        document.getElementById("9").addEventListener("mouseout", function() {
+            document.getElementById("move").innerHTML = 
+            ``
+        })
         document.getElementById("9").addEventListener("click", function() {
             document.getElementById("info").innerHTML = 
                 `
@@ -612,7 +718,20 @@
                 </div>
             `
         })
-
+        document.getElementById("10").addEventListener("mouseover", function() {
+            document.getElementById("move").innerHTML = 
+            `
+            <div class="class">
+                <div id="id">
+                    <span> Wipeout(CHP⛏️, MEL👊): Chip card that does <b>5</b> damage on hit, useful for acquiring Streak🔥.</span>
+                </div>
+            </div>
+            `
+        })
+        document.getElementById("10").addEventListener("mouseout", function() {
+            document.getElementById("move").innerHTML = 
+            ``
+        })
         document.getElementById("10").addEventListener("click", function() {
             document.getElementById("info").innerHTML = 
                 `
